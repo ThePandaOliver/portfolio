@@ -1,0 +1,70 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem 0;
+  transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+}
+
+.navbarScrolled {
+  padding: 0.6rem 0;
+  background: rgba(6, 12, 28, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 1px 0 rgba(99, 160, 255, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e8f0ff;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s;
+}
+
+.brand:hover {
+  opacity: 0.85;
+}
+
+.brandAccent {
+  color: #63a0ff;
+}
+
+.links {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(200, 215, 255, 0.7);
+  text-decoration: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  transition: color 0.2s ease, background 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.link:hover {
+  color: #e8f0ff;
+  background: rgba(99, 160, 255, 0.1);
+}
+
+.linkActive {
+  color: #63a0ff;
+  background: rgba(99, 160, 255, 0.12);
+}

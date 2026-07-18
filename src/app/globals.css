@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
+/* ── Design tokens ──────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-base:       #060c1c;
+  --bg-grad-mid:   #0a1530;
+  --bg-grad-end:   #0d1f3c;
+  --accent:        #2962ff;
+  --accent-light:  #63a0ff;
+  --text-primary:  #e8f0ff;
+  --text-muted:    rgba(160, 192, 255, 0.65);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/*
+ * Fixed gradient layer — always covers exactly the viewport, no seams.
+ * Two huge overlapping spheres fill the whole screen so there is never
+ * a dark dead-zone regardless of where you are on the page.
+ */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    /* Sphere A — large, top-left quadrant */
+    radial-gradient(
+      ellipse 160% 130% at 15% 20%,
+      rgba(41, 98, 255, 0.3) 0%,
+      transparent 62%
+    ),
+    /* Sphere B — large, bottom-right quadrant, overlaps A for no gap */
+    radial-gradient(
+      ellipse 150% 120% at 85% 80%,
+      rgba(25, 65, 210, 0.24) 0%,
+      transparent 60%
+    ),
+    /* Base */
+    #060c1c;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Transparent — html::before gradient shows through */
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar styling ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 160, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 160, 255, 0.5);
+}
+
+/* ── Selection ──────────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(41, 98, 255, 0.35);
+  color: #e8f0ff;
+}
+
+/* ── Section dividers ───────────────────────────────────────────────────── */
+section + section {
+  border-top: 1px solid rgba(99, 160, 255, 0.07);
+}
+
+/* ── Focus ring ─────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
