@@ -1,12 +1,6 @@
 @import "tailwindcss";
 
 /* ── Design tokens ──────────────────────────────────────────────────────── */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --bg-base:       #060c1c;
   --bg-grad-mid:   #0a1530;
@@ -57,6 +51,18 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Tailwind Utilities ────────────────────────────────────────────────── */
+@layer utilities {
+  .text-fill-transparent {
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-bg-clip {
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
 }
 
 /* ── Scrollbar styling ─────────────────────────────────────────────────── */
