@@ -91,6 +91,10 @@
   margin: 0 auto 1.75rem;
 }
 
+.bio span {
+  margin: 0;
+}
+
 .location {
   display: inline-flex;
   align-items: center;
