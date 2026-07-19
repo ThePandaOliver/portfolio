@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 /* ── Design tokens ──────────────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --bg-base:       #060c1c;
   --bg-grad-mid:   #0a1530;

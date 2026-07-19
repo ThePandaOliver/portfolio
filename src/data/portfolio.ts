@@ -2,15 +2,12 @@
 
 export const personal = {
     name: "Oliver Froberg",
-    title: "Software Developer & Minecraft Mod Author",
-    tagline: "I build things",
-    // tagline: "I build things — from full-stack web apps to Minecraft mods played by millions.",
+    title: "Software & Game Developer",
+    tagline: "I have experience from Web development, App Development and Game Development.",
     status: "Attending VidenDjurs for web development",
     bio: [
-        "Hey I'm Oliver! I'm a Danish Software developer who has been writing code ever since my teens, and I love it.",
-        "I first got the interest for programming when i started in 2018 with the interest for game development. I used tools like MCreator to create my first Minecraft Mod and later learned to use Unity and Unreal Engine 4 with minimal programming knowledge.",
-        "I finally learned the basic concepts of programming with C# in 2020, and since then I have been learning more and more about programming and software development.",
-        "Today I work primarily in TypeScript for frontend web development, and Java/Kotlin for backend and Minecraft Mod Development."
+        "Hey, I'm Oliver! I'm a Danish software and game developer. My programming journey began in 2018 through a passion for game development, exploring engines like Unity and Unreal before diving deep into Minecraft modding.",
+        "Over the years, I've expanded my skillset from early C# experiments to full-stack development. Today, I work primarily with TypeScript for modern web apps, and Java/Kotlin for backend systems and game modifications."
     ],
     location: "Denmark",
     links: {

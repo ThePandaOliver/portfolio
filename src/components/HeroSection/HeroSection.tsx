@@ -14,10 +14,10 @@ export default function HeroSection() {
 				<h1 className={styles.name}>{personal.name}</h1>
 				<p className={styles.title}>{personal.title}</p>
 				<p className={styles.tagline}>{personal.tagline}</p>
-				<p className={"text-base text-[#B4C8F0BF] max-w-160 mx-auto mt-7"}>
+				<p className={styles.bio}>
 					{
 						personal.bio.map((value, index) =>
-							<span key={index} className={"block mt-3"}>{value}</span>
+							<span key={index} className={`block ${index > 0 ? "mt-2" : ""}`}>{value}</span>
 						)
 					}
 				</p>
