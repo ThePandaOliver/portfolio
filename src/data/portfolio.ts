@@ -3,11 +3,11 @@
 export const personal = {
     name: "Oliver Froberg",
     title: "Software & Game Developer",
-    tagline: "I have experience from Web development, App Development and Game Development.",
+    tagline: "I have experience from Web, App and Game Development.",
     status: "Attending VidenDjurs for web development",
     bio: [
         "Hey, I'm Oliver! I'm a Danish software and game developer. My programming journey began in 2018 through a passion for game development, exploring engines like Unity and Unreal before diving deep into Minecraft modding.",
-        "Over the years, I've expanded my skillset from early C# experiments to full-stack development. Today, I work primarily with TypeScript for modern web apps, and Java/Kotlin for backend systems and game modifications."
+        "Over the years, I've expanded my skillset from early C# experiments to full-stack development. Today, I work primarily with TypeScript for web apps, and Java/Kotlin for backend systems and game modifications."
     ],
     location: "Denmark",
     links: {
