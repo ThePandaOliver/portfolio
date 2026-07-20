@@ -1,13 +1,13 @@
 import {personal} from "@/data/portfolio";
 import Button from "@/components/elements/button";
-import {TbArrowNarrowRight, TbBrandGithub} from "react-icons/tb";
+import {TbArrowNarrowRight, TbBrandGithub, TbCode, TbCodeblock} from "react-icons/tb";
 
 export default function HeroSection() {
 	return (
-		<div className={"h-screen grid grid-rows-[1fr_30rem]"}>
+		<div className={"h-screen flex flex-col justify-center"}>
 
 			{/* Profile */}
-			<div className={"mx-auto container flex gap-10 items-center"}>
+			<div className={"mx-auto container flex gap-10 items-center py-20"}>
 				{/* Profile Image */}
 				<div className={"rounded-full size-60 bg-gray-200"}>
 
@@ -28,10 +28,10 @@ export default function HeroSection() {
 
 			{/* Bottom content */}
 			<div>
-				<div className={"container"}>
+				<div className={"container mx-auto flex gap-8 justify-center"}>
 					<Button><TbBrandGithub/> Github Profile</Button>
-					<Button><TbBrandGithub/> Codebase</Button>
-					<Button>Projects <TbArrowNarrowRight/></Button>
+					<Button><TbCode/> Codebase</Button>
+					<Button>View Projects <TbArrowNarrowRight/></Button>
 				</div>
 
 			</div>
