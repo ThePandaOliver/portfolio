@@ -3,6 +3,7 @@
 import {useEffect, useState} from "react";
 import {navLinks, personal} from "@/data/portfolio";
 import styles from "./Navbar.module.css";
+import {TbBrandGithubFilled} from "react-icons/tb";
 
 export default function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
@@ -44,6 +45,8 @@ export default function Navbar() {
 			className={`${styles.navbar} ${scrolled ? styles.navbarScrolled : ""}`}
 		>
 			<div className={styles.inner}>
+				<div></div>
+
 				<nav className={styles.links} aria-label="Main navigation">
 					{navLinks.map((link) => (
 						<a
@@ -60,6 +63,10 @@ export default function Navbar() {
 						</a>
 					))}
 				</nav>
+
+				<a href={"https://github.com/ThePandaOliver/portfolio/"} className={styles.iconBtn + " " + styles.githubButton}>
+					<TbBrandGithubFilled/>
+				</a>
 			</div>
 		</header>
 	);

@@ -92,7 +92,8 @@
 }
 
 .bio span {
-  margin: 0;
+  display: block;
+  margin-bottom: .5rem;
 }
 
 .location {

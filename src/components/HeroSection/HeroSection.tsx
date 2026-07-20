@@ -6,6 +6,8 @@ export default function HeroSection() {
 	return (
 		<section id="hero" className={styles.section}>
 			<div className={styles.inner}>
+				{/* Profile */}
+
 				<div className={styles.badge}>
 					<span className={styles.badgeDot}/>
 					{personal.status}
@@ -17,7 +19,7 @@ export default function HeroSection() {
 				<p className={styles.bio}>
 					{
 						personal.bio.map((value, index) =>
-							<span key={index} className={`block ${index > 0 ? "mt-2" : ""}`}>{value}</span>
+							<span key={index}>{value}</span>
 						)
 					}
 				</p>
@@ -41,6 +43,8 @@ export default function HeroSection() {
 					{personal.location}
 				</div>
 
+				{/* Buttons */}
+
 				<div className={styles.actions}>
 					<a
 						href={personal.links.github}
@@ -57,7 +61,7 @@ export default function HeroSection() {
 						className={`${styles.btn} ${styles.btnSecondary}`}
 						id="hero-projects-btn"
 					>
-						View Projects
+						Projects
 						<TbArrowNarrowRight/>
 					</a>
 				</div>
