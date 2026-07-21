@@ -5,13 +5,13 @@ import Card from "@/components/elements/card";
 
 export default function HeroSection() {
 	return (
-		<div className={"h-screen flex flex-col justify-center"}>
+		<div className={"container mx-auto h-screen flex flex-col justify-center gap-20"}>
 
-			<div className={"mx-auto container grid grid-cols-[50%_30%_auto] gap-4"}>
+			<div className={"grid grid-cols-[50%_30%] gap-10 items-center justify-between"}>
 				{/* Profile */}
-				<div className={"flex gap-10 items-center py-20"}>
+				<div className={"flex gap-10 items-center"}>
 					{/* Profile Image */}
-					<div className={"rounded-full size-60 bg-gray-200"}>
+					<div className={"rounded-full size-60 aspect-square bg-gray-200"}>
 
 					</div>
 
@@ -33,14 +33,18 @@ export default function HeroSection() {
 				</Card>
 			</div>
 
+			{/* Project Carousel */}
+			<Card className={"w-full h-40"}>
+
+			</Card>
+
 			{/* Bottom content */}
 			<div>
-				<div className={"container mx-auto flex gap-8 justify-center"}>
-					<Button><TbBrandGithub/> Github Profile</Button>
+				<div className={"flex gap-8 justify-center"}>
+					<Button color={"primary"}><TbBrandGithub/> Github Profile</Button>
 					<Button><TbCode/> Codebase</Button>
 					<Button>View Projects <TbArrowNarrowRight/></Button>
 				</div>
-
 			</div>
 
 		</div>

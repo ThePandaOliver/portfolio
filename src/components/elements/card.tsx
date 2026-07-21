@@ -1,9 +1,13 @@
 import {ReactNode} from "react";
-import {FrostedGlass} from "@/components/elements/frostedGlass/frostedGlass";
+import {FrostedGlass} from "@/components/elements/frostedGlass";
+import {cn} from "@/lib/utils";
 
-export default function Card({ children, className }: { children: ReactNode, className?: string }) {
+export default function Card({ children, className }: { children?: ReactNode, className?: string }) {
   return (
-    <FrostedGlass className={`bg-black rounded-xl shadow-md w-fit h-fit ${className ?? ""}`}>
+    <FrostedGlass className={cn(
+      "rounded-xl w-fit h-fit",
+      className
+    )}>
       {children}
     </FrostedGlass>
   );
